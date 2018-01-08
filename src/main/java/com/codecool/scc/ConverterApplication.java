@@ -9,16 +9,7 @@ public class ConverterApplication {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        // TUTAJ Obsłużyć wyjątki: IllegalArgumentException (jak źle poda nazwe formatu)
-        // FileNotFoundException jak nie znajdzie pliku
-
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-
-//        FileReader fileReader = new com.codecool.scc.FileReader();
-//        FileReader fileReader = (FileReader) ctx.getBean("fileReader");
-//        OutputFormatterFactory outputFormatterFactory = new com.codecool.scc.OutputFormatterFactory();
-//        OutputFormatterFactory outputFormatterFactory = (OutputFormatterFactory) ctx.getBean( "outputFormatterFactory" );
-//        SimpleCsvConverter simpleCsvConverter = new com.codecool.scc.SimpleCsvConverter(fileReader, outputFormatterFactory);
         SimpleCsvConverter simpleCsvConverter = (SimpleCsvConverter) ctx.getBean("simpleCsvConverter");
 
         if (args.length == 0) {

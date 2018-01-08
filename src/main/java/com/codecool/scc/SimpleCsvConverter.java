@@ -1,9 +1,12 @@
 package com.codecool.scc;
 
+import org.springframework.stereotype.Component;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.List;
 
+@Component
 class SimpleCsvConverter {
 
     private FileReader fileReader;

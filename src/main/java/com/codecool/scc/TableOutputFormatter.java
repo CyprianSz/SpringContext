@@ -3,7 +3,7 @@ package com.codecool.scc;
 
 import java.util.List;
 
-public class TableOutputFormatter {
+public class TableOutputFormatter implements OutputFormatter {
 
     public void printToConsole(List<String[]> data) {
 

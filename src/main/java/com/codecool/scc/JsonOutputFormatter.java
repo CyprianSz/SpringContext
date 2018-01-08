@@ -1,6 +1,7 @@
 package com.codecool.scc;
 
 import org.json.simple.JSONObject;
+
 import java.util.List;
 
 public class JsonOutputFormatter implements OutputFormatter {
@@ -9,8 +10,8 @@ public class JsonOutputFormatter implements OutputFormatter {
         JSONObject json = new JSONObject();
         String[] headers = data.get(0);
 
-        for(int i = 1; i < data.size(); i++) {
-            for(int j = 0; j < headers.length; j++) {
+        for (int i = 1; i < data.size(); i++) {
+            for (int j = 0; j < headers.length; j++) {
                 json.put(headers[j], data.get(i)[j]);
             }
             System.out.println(json);

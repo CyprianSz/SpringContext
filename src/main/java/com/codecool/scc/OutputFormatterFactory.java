@@ -1,9 +1,8 @@
 package com.codecool.scc;
 
-import java.io.OutputStream;
 
-public class OutputFormatterFactory {
-    public OutputFormatter createByFormat(OutputFormat outputFormat) {
+class OutputFormatterFactory {
+    OutputFormatter createByFormat(OutputFormat outputFormat) {
         switch (outputFormat) {
             case JSON:
                 return new JsonOutputFormatter();
@@ -12,5 +11,6 @@ public class OutputFormatterFactory {
             case TABLE:
                 return new TableOutputFormatter();
         }
+        return null;
     }
 }

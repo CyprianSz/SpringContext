@@ -14,9 +14,12 @@ public class ConverterApplication {
 
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        com.codecool.scc.FileReader fileReader = new com.codecool.scc.FileReader();
-        com.codecool.scc.OutputFormatterFactory outputFormatterFactory = new com.codecool.scc.OutputFormatterFactory();
-        com.codecool.scc.SimpleCsvConverter simpleCsvConverter = new com.codecool.scc.SimpleCsvConverter(fileReader, outputFormatterFactory);
+//        FileReader fileReader = new com.codecool.scc.FileReader();
+//        FileReader fileReader = (FileReader) ctx.getBean("fileReader");
+//        OutputFormatterFactory outputFormatterFactory = new com.codecool.scc.OutputFormatterFactory();
+//        OutputFormatterFactory outputFormatterFactory = (OutputFormatterFactory) ctx.getBean( "outputFormatterFactory" );
+//        SimpleCsvConverter simpleCsvConverter = new com.codecool.scc.SimpleCsvConverter(fileReader, outputFormatterFactory);
+        SimpleCsvConverter simpleCsvConverter = (SimpleCsvConverter) ctx.getBean("simpleCsvConverter");
 
         if (args.length == 0) {
             System.out.println("No input file defined");

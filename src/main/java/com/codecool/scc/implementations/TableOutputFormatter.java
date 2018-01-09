@@ -1,5 +1,7 @@
-package com.codecool.scc;
+package com.codecool.scc.implementations;
 
+
+import com.codecool.scc.services.OutputFormatter;
 
 import java.util.List;
 

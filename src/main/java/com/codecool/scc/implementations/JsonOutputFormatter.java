@@ -1,5 +1,6 @@
-package com.codecool.scc;
+package com.codecool.scc.implementations;
 
+import com.codecool.scc.services.OutputFormatter;
 import org.json.simple.JSONObject;
 
 import java.util.List;

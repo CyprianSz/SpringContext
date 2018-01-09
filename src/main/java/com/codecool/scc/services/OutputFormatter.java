@@ -1,4 +1,4 @@
-package com.codecool.scc;
+package com.codecool.scc.services;
 
 import java.util.List;
 

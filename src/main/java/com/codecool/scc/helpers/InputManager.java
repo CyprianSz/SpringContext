@@ -2,13 +2,14 @@ package com.codecool.scc.helpers;
 
 import com.codecool.scc.SimpleCsvConverter;
 import com.codecool.scc.enums.OutputFormat;
+import com.sun.media.sound.InvalidFormatException;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 
 public class InputManager {
 
-    public void manageArguments(String[] args, SimpleCsvConverter simpleCsvConverter) throws FileNotFoundException {
+    public void manageArguments(String[] args, SimpleCsvConverter simpleCsvConverter) throws FileNotFoundException, InvalidFormatException {
         if (args.length == 0) {
             System.out.println("No input file defined");
         } else if (args.length == 1) {

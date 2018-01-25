@@ -1,6 +1,7 @@
 package com.codecool.scc;
 
 import com.codecool.scc.helpers.InputManager;
+import com.sun.media.sound.InvalidFormatException;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.File;
@@ -20,7 +21,7 @@ public class ConverterApplication {
         } catch (FileNotFoundException e) {
             System.out.println("Given file does not exists");
             e.printStackTrace();
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException | InvalidFormatException e) {
             System.out.println("Format not supported");
             e.printStackTrace();
         }

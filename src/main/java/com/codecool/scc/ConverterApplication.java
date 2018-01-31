@@ -11,10 +11,9 @@ public class ConverterApplication {
 
     public static void main(String[] args) {
 
-        InputManager inputManager = new InputManager();
-
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         SimpleCsvConverter simpleCsvConverter = (SimpleCsvConverter) ctx.getBean("simpleCsvConverter");
+        InputManager inputManager = (InputManager) ctx.getBean("inputManager");
 
         try {
             inputManager.manageArguments( args, simpleCsvConverter );

@@ -3,10 +3,12 @@ package com.codecool.scc.helpers;
 import com.codecool.scc.SimpleCsvConverter;
 import com.codecool.scc.enums.OutputFormat;
 import com.sun.media.sound.InvalidFormatException;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 
+@Component
 public class InputManager {
 
     public void manageArguments(String[] args, SimpleCsvConverter simpleCsvConverter) throws FileNotFoundException, InvalidFormatException {
@@ -16,7 +18,7 @@ public class InputManager {
             File file = new File(args[0]);
             simpleCsvConverter.convert( file );
         } else if (args.length == 2) {
-            OutputFormat outputFormat = Enum.valueOf( OutputFormat.class, args[0].toUpperCase());
+            OutputFormat outputFormat = OutputFormat.getFormat(args[0]);
             File file = new File(args[1]);
             simpleCsvConverter.convert( file, outputFormat );
         }
